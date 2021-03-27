@@ -72,6 +72,7 @@ app.get('/:topicId',(req,res)=>{
   })
 })
 
+
 app.post('/delete',(req,res)=>{
   console.log(req.body.checkbox);
   if(req.body.listName=='today'){
@@ -110,7 +111,4 @@ app.post('/',(req,res)=>{
     })
 
   }
-})
-app.get('/work',(req,res)=>{
-  res.render("list",{listItem:"Work Items",newitem:workitems})
 })
