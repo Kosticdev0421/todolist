@@ -5,10 +5,11 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
-app.listen(3000,()=>{
-  console.log('server started');
-})
 
+const port = process.env.PORT || 3000
+app.listen(port,function () {
+ console.log("Server is running at port 3000");
+});
 const mongoose=require('mongoose');
 mongoose.connect("mongodb+srv://admin-arihant-09:Test-123@cluster0.rfjnp.mongodb.net/todolistDB?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true});
 
